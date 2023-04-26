@@ -1,7 +1,9 @@
 import { Nunito } from "next/font/google";
 
 import './globals.css'
-import Navbar from "@/app/components/Navbar/Navbar";
+import Navbar from "@/app/components/navbar/Navbar";
+import Modal from "@/app/components/modals/Modal";
+import RegisterModal from "@/app/components/modals/RegisterModal";
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+      <RegisterModal/>
       <Navbar/>
       {children}</body>
     </html>
